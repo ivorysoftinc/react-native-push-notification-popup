@@ -288,11 +288,11 @@ const styles = StyleSheet.create({
 
   popupContentContainer: {
     backgroundColor: 'white',  // TEMP
-    borderRadius: 12,
+    borderRadius: Platform.select({ ios: 12 }),
     minHeight: 86,
     // === Shadows ===
     // Android
-    elevation: 2,
+    elevation: 5,
     // iOS
     shadowColor: '#000000',
     shadowOpacity: 0.5,
@@ -306,8 +306,8 @@ const styles = StyleSheet.create({
   popupHeaderContainer: {
     height: 32,
     backgroundColor: '#F1F1F1',  // TEMP
-    borderTopLeftRadius: 12,
-    borderTopRightRadius: 12,
+    borderTopLeftRadius: Platform.select({ ios: 12 }),
+    borderTopRightRadius: Platform.select({ ios: 12 }),
     paddingVertical: 6,
     flexDirection: 'row',
     justifyContent: 'space-between',
